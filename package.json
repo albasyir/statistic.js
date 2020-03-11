@@ -1,0 +1,31 @@
+{
+  "name": "statistic",
+  "version": "0.0.4-test",
+  "description": "Faster statistic module for all you need",
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
+  "scripts": {
+    "dev": "babel src --watch --out-dir dist",
+    "build": "babel module --minified --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albasyir/statistic.js.git"
+  },
+  "keywords": [
+    "statistic",
+    "math"
+  ],
+  "author": "Abdul Aziz Al Basyir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albasyir/statistic.js/issues"
+  },
+  "homepage": "https://github.com/albasyir/statistic.js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-register": "^6.26.0"
+  }
+}
