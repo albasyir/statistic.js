@@ -1,12 +1,13 @@
 {
   "name": "statistic",
-  "version": "0.0.4-test",
-  "description": "Faster statistic module for all you need",
+  "version": "0.0.4-cbt",
+  "description": "Faster statistic module for all you need (Close Beta Tester)",
   "main": "./dist/index.js",
   "module": "./src/index.js",
   "scripts": {
     "dev": "babel src --watch --out-dir dist",
-    "build": "babel module --minified --out-dir dist"
+    "build": "babel src --minified --out-dir dist",
+    "test": "node test"
   },
   "repository": {
     "type": "git",
