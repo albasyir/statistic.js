@@ -8,7 +8,3 @@ First, install the `statistic.js` module, using `npm install statistic`, then in
       with all of the module's methods attached to it.<br /> <pre>var { Statistic } = require('statistic')</pre>
   * **When you use `import`** to use modules in my project. I'm probably using Babel, `@std/esm`, Webpack, or Rollup.
       Include a specific named export: <pre>import { Statistic } from 'statistic'</pre>
-<<<<<<< HEAD
-=======
-      Simple statistics has _only_ named exports for ES6.
->>>>>>> master
