@@ -1,1 +1,1 @@
-module.exports = require('./dist/Statistic');
+module.exports = require('./dist/bundle.js');

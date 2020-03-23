@@ -5,9 +5,11 @@
   "main": "./dist/index.js",
   "module": "./src/index.js",
   "scripts": {
-    "dev": "babel src --watch --out-dir dist",
-    "build": "babel src --minified --out-dir dist",
-    "test": "node test"
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "webpack --mode=production",
+    "build": "npm run build:types && npm run build:js"
   },
   "repository": {
     "type": "git",
@@ -17,16 +19,28 @@
     "statistic",
     "math"
   ],
-  "author": "Abdul Aziz Al Basyir",
+  "author": {
+    "name": "Abdul Aziz Al Basyir",
+    "email": "abdulazizalbasyir119@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/albasyir/statistic.js/issues"
   },
   "homepage": "https://github.com/albasyir/statistic.js#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "babel-register": "^6.26.0"
+    "@babel/core": "7.8.4",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+    "@babel/preset-env": "7.8.4",
+    "@babel/preset-typescript": "7.8.3",
+    "babel-loader": "8.0.6",
+    "fork-ts-checker-webpack-plugin": "4.0.4",
+    "typescript": "3.8.2",
+    "webpack": "4.41.6",
+    "webpack-cli": "3.3.11"
+  },
+  "resolutions": {
+    "terser": "3.14.1"
   }
 }
