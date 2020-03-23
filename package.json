@@ -38,7 +38,8 @@
     "fork-ts-checker-webpack-plugin": "4.0.4",
     "typescript": "3.8.2",
     "webpack": "4.41.6",
-    "webpack-cli": "3.3.11"
+    "webpack-cli": "3.3.11",
+    "minimist": ">=1.2.2"
   },
   "resolutions": {
     "terser": "3.14.1"
