@@ -1,34 +1,18 @@
-import Data from './Data'
-import Class from './Class'
+import { default as Class, ClassConstructiorInterface } from './Class'
 
 class Statistic {
-    data: Data;
-    private class: Array<Class> = [];
-    private intervalClass: Number | undefined;
-
-    constructor(newState: Array<any>) {
-        this.data = new Data(newState);
+    private baseClass: Class
+    private class: Array<Class> = []
+    
+    constructor(newbaseClass ?: ClassConstructiorInterface) {
+        this.baseClass = new Class(newbaseClass as ClassConstructiorInterface)
     }
 
-    setIntervalClass(automaticOrSetting : Number | undefined) {
-        if(!automaticOrSetting) {
-            // automation set interval class
+    makeClass(objectClass : Array<object>) {
+        for (let row = 0; row < objectClass.length; row++) {
+            this.class[row] = new Class(objectClass[row] as ClassConstructiorInterface)
         }
-
-        this.intervalClass = automaticOrSetting;
-    }
-
-    getIntervalClass() {
-        if(!this.intervalClass) {
-            this.setIntervalClass(undefined);
-        }
-        return this.intervalClass;
-    }
-
-    makeClass() {
-        // make automation class interval
-        let activeInterval = this.getIntervalClass();
     }
 }
 
-export default Statistic;
+export default Statistic

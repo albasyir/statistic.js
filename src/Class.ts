@@ -1,14 +1,30 @@
-class Class {
-    data: Array<number> = [];
-    frequency: number = 0;
+import Data from './Data'
 
-    constructor(data: Array<number>) {
-        this.set(data);
+export interface ClassConstructiorInterface {
+    name: String, 
+    data: any[]
+}
+class Class extends Data{
+    name: String
+    intervalClass: number | undefined
+
+    constructor(classAttribute: ClassConstructiorInterface) {
+        super(classAttribute.data)
+
+        this.name = classAttribute.name
     }
 
-    set(newData: Array<number>) {
-        this.data = newData;
-        this.frequency = newData.length;
+    setIntervalClass(automaticOrSetting ?: Number) {
+        if(!automaticOrSetting) {
+
+        }
+    }
+
+    getIntervalClass() {
+        if(!this.intervalClass) {
+            this.setIntervalClass()
+        }
+        return this.intervalClass
     }
 }
 
